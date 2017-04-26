@@ -82,7 +82,7 @@ Only the three quirks included above are recognized at this point:
 
 <!--
   Decoder capabilities for 8939
-   ________________________________________________________________________
+_________________________________________________________________
   | Codec    | W       H       fps     Mbps    MB/s    | Encode Secure-dec |
   |__________|_________________________________________|___________________|
   | h264     | 1920    1088    60      50      489600  |  Y       Y        |
@@ -95,6 +95,7 @@ Only the three quirks included above are recognized at this point:
   | h263     | 864     480     30      2       48600   |  Y       N        |
   | mpeg2    | 1920    1088    30      80      244800  |  N       Y        |
   |__________|_________________________________________|___________________|
+
 -->
 
 <!--
@@ -112,9 +113,9 @@ Only the three quirks included above are recognized at this point:
 <MediaCodecs>
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
-    <Settings>
-        <Setting name="max-video-encoder-input-buffers" value="9" />
-    </Settings>
+     <Settings>
+         <Setting name="max-video-encoder-input-buffers" value="9" />
+     </Settings>
     <Encoders>
         <!-- Video Hardware  -->
         <MediaCodec name="OMX.qcom.video.encoder.avc" type="video/avc" >
