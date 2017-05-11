@@ -68,7 +68,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
-
+    
+    # Enable Power Efficient Workqueue
+    write /sys/module/workqueue/parameters/power_efficient 1
+    
     # Enable low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
@@ -91,4 +94,4 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
-    setprop sys.io.scheduler zen
+    setprop sys.io.scheduler "maple"
